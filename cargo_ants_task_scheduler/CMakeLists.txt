@@ -1,0 +1,62 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(cargo_ants_task_scheduler)
+
+find_package(catkin REQUIRED COMPONENTS
+  cargo_ants_msgs
+  sfl2
+  estar2
+  roscpp
+)
+
+###################################
+## catkin specific configuration ##
+###################################
+## The catkin_package macro generates cmake config files for your package
+## Declare things to be passed to dependent projects
+## INCLUDE_DIRS: uncomment this if you package contains header files
+## LIBRARIES: libraries you create in this project that dependent projects also need
+## CATKIN_DEPENDS: catkin_packages dependent projects also need
+## DEPENDS: system dependencies of this project that dependent projects also need
+catkin_package(
+  INCLUDE_DIRS include
+  LIBRARIES task_scheduler_lib 
+  CATKIN_DEPENDS
+  cargo_ants_msgs
+  sfl2
+  estar2
+  roscpp
+  #  DEPENDS system_lib
+)
+#include (/usr/bin/gnuplot)
+#find_package (GNUPLOT 4.4.3 COMPONENTS gnuplot)
+###########
+## Build ##
+###########
+
+## Specify additional locations of header files
+## Your package locations should be listed before other locations
+# include_directories(include)
+include_directories(
+  include
+  ${catkin_INCLUDE_DIRS}
+)
+include_directories (${GNUPLOT_INCLUDE_DIRS})
+
+add_library (cargo_ants_task_scheduler SHARED
+    src/Assignment.cpp
+    src/BipartiteGraph.cpp
+    src/Hungarian.cpp
+    src/PlotGraph.cpp
+    )
+
+target_link_libraries (cargo_ants_task_scheduler ${catkin_LIBRARIES})
+#target_link_libraries (${GNUPLOT_LIBRARIES})
+
+add_executable(main src/main.cpp)
+target_link_libraries(main cargo_ants_task_scheduler)
+
+ # add_executable (main src/main.cpp)
+
+#add_executable(test_utility src/test_utility.cpp)
+#target_link_libraries(test_utility task_scheduler_lib)
+

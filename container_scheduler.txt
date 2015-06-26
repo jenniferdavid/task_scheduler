@@ -1,0 +1,8 @@
+Container terminal operations and decision problems can be grouped in four main classes.
+
+Containers are usually transferred from the quayside to the yard, from
+the yard to the gate and viceversa by internal trucks, straddle carriers and AGVs. The transfer
+originates decision problems such as vehicle routing and dispatching strategies. Typical objec-
+tives aim to minimize the vehicle fleet size, the total distance traveled to complete the tasks,
+the fleet operating costs or the total operations delay. Some optimization strategies can also
+include deadlock prevention and real-time conflict avoidance for automated guided vehicles

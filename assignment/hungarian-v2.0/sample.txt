@@ -1,0 +1,72 @@
+  Accept new verbose level: 1
+
+  *Seed for random generator: 1425330528
+
+The assignment problem (matrix) you queried is:
+
+  87	  61	  0	
+  65	  80	  79	
+  0	  3	  0	
+
+The initial labels for vertices:
+Labels for agents:
+87 80 3 
+Labels for tasks:
+0 0 0 
+
+Pick an unmatched agent: 0
+No need relabel, pick available task(s) 0 and put in queue.
+Got task VID 0
+Task VID 0 has NOT been matched, then 0-->0 is an augmenting path, searching...
+I am AGENT VID: 0
+--Found target TASK VID: 0, augmenting path found!
+Display augmenting path: 
+(0,0) 
+
+Pick an unmatched agent: 1
+No need relabel, pick available task(s) 1 and put in queue.
+Got task VID 1
+Task VID 1 has NOT been matched, then 1-->1 is an augmenting path, searching...
+I am AGENT VID: 1
+--Found target TASK VID: 1, augmenting path found!
+Display augmenting path: 
+(1,1) 
+
+Pick an unmatched agent: 2
+No need relabel, pick available task(s) 1 and put in queue.
+Got task VID 1
+Task VID 1 has been matched, and I gonna extend alternating tree.
+Extending alternating tree...
+Need relabel. Searching for min_delta...
+(1,0)->min_data: 15
+(1,2)->min_data: 1
+No need relabel, pick available task(s) 2 and put in queue.
+Got task VID 2
+Task VID 2 has NOT been matched, then 2-->2 is an augmenting path, searching...
+I am AGENT VID: 2
+--Found matched TASK VID: 1
+I am TASK VID: 1
+--Found matched AGENT VID: 1
+I am AGENT VID: 1
+--Found target TASK VID: 2, augmenting path found!
+Display augmenting path: 
+(2,1) (1,1) (1,2) 
+
+*****************************************************
+
+Your queried assignment problem is:
+  87	  61	  0	
+  65	  80	  79	
+  0	  3	  0	
+
+The matching configuration is:
+  1	  0	  0	
+  0	  0	  1	
+  0	  1	  0	
+
+@_@ Kuhn-Munkres Hungarian Perfect Matching:
+(0,0) (1,2) (2,1) 
+Optimization result (weights sum): 169
+
+*****************************************************
+

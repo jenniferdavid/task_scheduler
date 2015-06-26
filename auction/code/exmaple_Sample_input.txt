@@ -1,0 +1,28 @@
+Suppose that file items.dat contains:
+
+2
+5.00 05:06:27 Chinese Vase
+25.00 15:30:11 Hummel Figurine    
+
+and that file bidders.dat contains:
+
+2
+jjones 37.37
+ssmith 55.55    
+
+and that file bids.dat contains:
+
+3
+jjones 26.00 00:18:03 Hummel Figurine
+jjones 60.00 04:03:01 Chinese Vase
+ssmith 27.00 09:03:05 Chinese Vase    
+
+
+Then if the program is invoked like this
+
+program-name items.dat bidders.dat bids.dat
+
+the output should be
+
+Chinese Vase reserve not met
+Hummel Figurine won by jjones for 26.00    
